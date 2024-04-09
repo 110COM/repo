@@ -74,6 +74,6 @@ jobs:
           git commit -m "Auto sync C files from repo"
           git push https://github.com/110COM/0.git HEAD:main
           env:
-          GITHUB_TOKEN: ${{ secrets.REPO_B_TOKEN }}
+          REPO_B_TOKEN: ${{ secrets.REPO_B_TOKEN }}
           
  
