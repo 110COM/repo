@@ -1,0 +1,76 @@
+name: its
+
+on:
+  schedule:
+    - cron: '20 8,23 * * *'
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+    
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.12.2'
+
+      - name: Update pip
+        run: python -m pip install --upgrade pip
+        
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          python -m pip install aiohttp
+          #pip install selenium requests futures opencv-python eventlet
+          pip install selenium requests futures eventlet
+          sudo apt-get install ffmpeg
+          
+
+      #- name: Install Chrome WebDriver
+        #run: |
+          #LATEST_CHROMEDRIVER_VERSION=120.0.6099.109
+          #curl -sS -o chromedriver_linux64.zip "https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/120.0.6099.109/linux64/chrome-headless-shell-linux64.zip"
+          #sudo unzip chromedriver_linux64.zip -d /usr/local/bin
+          #rm chromedriver_linux64.zip
+      #- name: Set chromedriver path
+        #run: |
+          #sudo ln -sf /usr/local/bin/chrome-headless-shell-linux64/chrome-headless-shell /usr/local/bin/chromedriver
+          #sudo chmod +x /usr/local/bin/chromedriver
+
+      - name: Run itv
+        run: python ${{ github.workspace }}/por/itv.py
+
+      - name: Run itvtest
+        run: python ${{ github.workspace }}/por/itvtest.py
+
+      - name: Run hd
+        run: python ${{ github.workspace }}/por/hd.py
+        
+
+
+      - name: 提交更改
+        run: |
+          git config --local user.email "6fybq3a5@nqmo.com"
+          git config --local user.name "o1il"
+          git add .
+          git commit -m "Add generated files"
+          #git pull --rebase
+          git push -f
+
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.REPO_B_TOKEN }}
+          branch: main
+          repository: 110COM/0
+          
+ 
