@@ -10,12 +10,15 @@ on:
 
 
 jobs:
-  build:
+  sync:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          repository: repo
+          path: repo
     
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -66,11 +69,13 @@ jobs:
           git push -f
 
 
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.REPO_B_TOKEN }}
-          branch: main
-          repository: 110COM/0
+      - name: Run sync script
+        run: |
+          cp -r repo/C/* .
+          git add .
+          git commit -m "Auto sync C files from repo"
+          git push https://${{ secrets.REPO_B_TOKEN }}@github.com/0.git HEAD:main
+        env:
+          REPO_B_TOKEN: ${{ secrets.REPO_B_TOKEN }}
           
  
