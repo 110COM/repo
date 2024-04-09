@@ -70,7 +70,7 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.REPO_B_TOKEN }}
-          branch: master
+          branch: main
           repository: 110COM/0
           
  
