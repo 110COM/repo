@@ -167,8 +167,8 @@ for prefix in sorted(other_merged.keys()):
 
 
 
-
-with open("10001", 'w', encoding='utf-8') as file:
+out1_file_path = f"C/10001"
+with open(out1_file_path, 'w', encoding='utf-8') as file:
 
     file.write('央视频道,#genre#\n')
     for channel_name, channel_url in cctv_merged:
@@ -189,22 +189,22 @@ with open("10001", 'w', encoding='utf-8') as file:
     
 
 
-
-with open("hyd", 'w', encoding='utf-8') as file:
+out2_file_path = f"C/hyd"
+with open(out2_file_path, 'w', encoding='utf-8') as file:
     # 写入CCTV频道
     file.write('央视频道,#genre#\n')
     for channel_name, channel_url in cctv_merged:
         file.write(f"{channel_name},{channel_url}\n")
 
-
-with open("hysd", 'w', encoding='utf-8') as file:
+out3_file_path = f"C/hysd"
+with open(out3_file_path, 'w', encoding='utf-8') as file:
     # 写入CCTV频道
     file.write('央视频道,#genre#\n')
     for channel_name, channel_url in cctv_merged:
         file.write(f"{channel_name},{channel_url}\n")
 
-
-with open("10001m3u", 'w', encoding='utf-8') as file:
+out4_file_path = f"C/10001m3u"
+with open(out4_file_path, 'w', encoding='utf-8') as file:
     file.write('#EXTM3U\n')
     
 
@@ -226,8 +226,8 @@ with open("10001m3u", 'w', encoding='utf-8') as file:
 
 
 
-
-with open("hydm3u", 'w', encoding='utf-8') as file:
+out5_file_path = f"C/hydm3u"
+with open(out5_file_path, 'w', encoding='utf-8') as file:
     file.write('#EXTM3U\n')
     
 
