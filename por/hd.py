@@ -24,7 +24,7 @@ error_channels = []
 channels = []
 
 speed_file_path = f"jiee/itv_speed.txt"
-with open('itv_speed.txt', 'r', encoding='utf-8') as file:
+with open(speed_file_path, 'r', encoding='utf-8') as file:
     for line in file:
         line = line.strip()
         if line and ',' in line:
