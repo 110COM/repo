@@ -71,11 +71,11 @@ jobs:
 
       - name: Run sync script
         run: |
-          cp -r repo/C/* .
+          cp -r /github/workspace/repo/C/* .
           git add .
           git commit -m "Auto sync C files from repo"
-          git push https://${{ secrets.REPO_B_TOKEN }}@github.com/0.git HEAD:main
-        env:
+          git push https://${{ secrets.REPO_B_TOKEN }}@github.com/110COM/0.git HEAD:main
+          env:
           REPO_B_TOKEN: ${{ secrets.REPO_B_TOKEN }}
           
  
