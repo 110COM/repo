@@ -170,7 +170,7 @@ async def main():
     # 将处理后的数据写入文件
     #script_dir = os.path.dirname(os.path.abspath(__file__))
     #output_file_path = os.path.join(script_dir, 'itv.txt')
-	  output_file_path = f"jiee/itv.txt"
+    output_file_path = f"jiee/itv.txt"
     with open(output_file_path, 'w', encoding='utf-8') as file:
         for name, urlx in processed_data:
             file.write(f"{name},{urlx}\n")  # 写入不同格式的数据到文件
