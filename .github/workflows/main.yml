@@ -16,9 +16,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        with:
-          repository: 110COM/repo
-          #path: repo
+
     
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -71,10 +69,10 @@ jobs:
 
       - name: Run sync script
         run: |
-          cp -r /github/workspace/repo/C/* .
+          cp -r C/* .
           git add .
           git commit -m "Auto sync C files from repo"
-          git push https://${{ secrets.REPO_B_TOKEN }}@github.com/110COM/0.git HEAD:main
+          git push https://github.com/110COM/0.git HEAD:main
           env:
           REPO_B_TOKEN: ${{ secrets.REPO_B_TOKEN }}
           
