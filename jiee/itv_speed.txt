@@ -1,8 +1,10 @@
-CCTV5,http://121.19.134.48:808/tsfile/live/0005_1.m3u8?key=txiptv&playlive=1&authid=0
-CCTV11,http://219.135.208.218:8083/tsfile/live/0011_1.m3u8?key=txiptv&playlive=1&authid=0
-CCTV第一剧场,http://121.19.134.48:808/tsfile/live/1033_1.m3u8?key=txiptv&playlive=1&authid=0
-CCTV风云足球,http://121.19.134.48:808/tsfile/live/1037_1.m3u8?key=txiptv&playlive=1&authid=0
-优漫卡通,http://219.135.208.218:8083/tsfile/live/1007_1.m3u8?key=txiptv&playlive=1&authid=0
-保定生活健康,http://121.19.134.48:808/tsfile/live/1009_1.m3u8?key=txiptv&playlive=1&authid=0
-卡酷动画,http://219.135.208.218:8083/tsfile/live/1008_1.m3u8?key=txiptv&playlive=1&authid=0
+CCTV1,http://123.183.24.83:6666/tsfile/live/faacts/0001_1.m3u8?key=txiptv&playlive=1&authid=0
+CCTV6,http://121.19.134.48:808/tsfile/live/0006_1.m3u8?key=txiptv&playlive=1&authid=0
+CCTV8,http://121.19.134.48:808/tsfile/live/0008_1.m3u8?key=txiptv&playlive=1&authid=0
+CCTV14,http://219.135.208.218:8083/tsfile/live/0014_1.m3u8?key=txiptv&playlive=1&authid=0
+云南卫视,http://123.183.24.83:6666/tsfile/live/0119_1.m3u8?key=txiptv&playlive=1&authid=0
+内蒙古卫视,http://111.225.115.13:808/tsfile/live/0109_1.m3u8?key=txiptv&playlive=1&authid=0
+浙江卫视,http://123.183.24.83:6666/tsfile/live/0124_1.m3u8?key=txiptv&playlive=1&authid=0
 深圳都市,http://livepull-tcyzb.sztv.com.cn/live/dushi01.m3u8
+石家庄生活,http://123.183.24.83:6666/tsfile/live/faacts/1005_1.m3u8?key=txiptv&playlive=1&authid=0
+辽宁卫视,http://219.135.208.218:8083/tsfile/live/0121_1.m3u8?key=txiptv&playlive=1&authid=0
