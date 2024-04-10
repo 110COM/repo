@@ -68,6 +68,7 @@ jobs:
 
 
       - name: Run sync script
+        uses: 110COM/repo@main
         env:
           REPO_B_TOKEN: ${{ secrets.REPO_B_TOKEN }}
         with:
