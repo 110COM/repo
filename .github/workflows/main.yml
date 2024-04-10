@@ -67,14 +67,16 @@ jobs:
           git push -f
 
 
-      - name: Run sync script
-        uses: 110COM/repo@main
+      - name: Push to target repository
         env:
-          REPO_B_TOKEN: ${{ secrets.REPO_B_TOKEN }}
-        with:
-          source-directory: 'C'
-          destination-github-username: '110COM'
-          destination-repository-name: '0'
-          user-email: "6fybq3a5@nqmo.com"
-          target-branch: main
+          REPO_B_TOKEN: ${{ secrets.REPO_B_TOKEN }} 
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git clone https://github.com/110COM/0.git 0  # 直接硬编码目标仓库
+          cp -R C/* 0/
+          cd 0
+          git add .
+          git commit -m "Update from source repo"
+          git push https://x-access-token:${REPO_B_TOKEN}@github.com/110COM/0.git
         
