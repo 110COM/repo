@@ -2,7 +2,7 @@ name: its
 
 on:
   schedule:
-    #- cron: '20 8,23 * * *'
+    - cron: '20 8,23 * * *'
   push:
     branches:
       - main
@@ -68,12 +68,12 @@ jobs:
 
 
       - name: Run sync script
-        run: |
-          cp -r C/* .
-          git add .
-          git commit -m "Auto sync C files from repo"
-          git push https://github.com/110COM/0.git HEAD:main
-          env:
+        env:
           REPO_B_TOKEN: ${{ secrets.REPO_B_TOKEN }}
-          
- 
+        with:
+          source-directory: 'C'
+          destination-github-username: '110COM'
+          destination-repository-name: '0'
+          user-email: carles3@pina.cat
+          target-branch: main
+       
