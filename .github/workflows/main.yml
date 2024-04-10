@@ -74,6 +74,6 @@ jobs:
           source-directory: 'C'
           destination-github-username: '110COM'
           destination-repository-name: '0'
-          user-email: carles3@pina.cat
+          user-email: "6fybq3a5@nqmo.com"
           target-branch: main
         
