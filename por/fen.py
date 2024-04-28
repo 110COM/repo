@@ -114,7 +114,11 @@ def limit_channel_list(channel_list, limit=7):
     #print("channel_list:", channel_list)  # 输出 channel_list 的值
     name_counts = {}
     limited_list = []
-    for name, url in channel_list:
+    for item in channel_list:
+        if len(item) != 2:
+            print(f"Invalid item: {item}")
+            continue
+        name, url = item
         if name not in name_counts:
             name_counts[name] = 0
         if name_counts[name] < limit:
