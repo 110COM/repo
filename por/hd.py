@@ -109,6 +109,10 @@ with open(in1_file_path, 'r',  encoding='utf-8') as file:
     lines = [line.strip() for line in lines if line.strip() and 'http' in line]
     
     for line in lines:
+        if ',' not in line:
+            print(f"Skipping invalid data: {line}")
+            continue
+            
         name, url = line.strip().split(',')
         channel_name = name.split(' ')[0]
         
