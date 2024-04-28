@@ -24,7 +24,7 @@ with open(in1_file_path, 'r',  encoding='utf-8') as file:
             print(f"Skipping invalid data: {line}")
             continue
             
-        name, url = line.strip().split(',')
+        name, url = line.strip().split(',', 1)  # 修改此行，限制分割成两部分
         channel_name = name.split(' ')[0]
         
 
