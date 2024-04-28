@@ -92,7 +92,8 @@ def group_and_sort_channels(channel_list):
     
     return sorted_channels
 
-#
+
+
 cctv_channels_sorted = group_and_sort_channels(cctv_channels)
 satellite_channels_sorted = group_and_sort_channels(satellite_channels)
 sport_channels_sorted = group_and_sort_channels(sport_channels)
@@ -107,7 +108,7 @@ other_channels2_sorted = group_and_sort_channels(other_channels2)
 
 
 
-#
+
 def limit_channel_list(channel_list, limit=7):
     #print("Starting limit_channel_list function...")
     #print("channel_list:", channel_list)  # 输出 channel_list 的值
@@ -123,7 +124,7 @@ def limit_channel_list(channel_list, limit=7):
     
     
     
-#
+
 channel_lists = {
     "央视频道": cctv_channels_sorted,
     "卫视频道": satellite_channels_sorted,
@@ -138,7 +139,7 @@ channel_lists = {
 
 
 
-#
+
 output5_file_path = f"C/hyd"
 
 cctv_channels = channel_lists.get("央视频道", [])
@@ -148,7 +149,7 @@ with open(output5_file_path, 'w', encoding='utf-8') as output_file:
         output_file.write(f"{name},{url}\n")
 
 
-#
+
 output6_file_path = f"C/hydm3u"
 
 cctv_channels = channel_lists.get("央视频道", [])
@@ -162,7 +163,7 @@ with open(output6_file_path, 'w', encoding='utf-8') as output_file:
 
 
 
-#
+
 output7_file_path = f"C/10001"
 
 # 写入所有频道列表并限制数量
@@ -178,10 +179,10 @@ with open(output7_file_path, 'w', encoding='utf-8') as output_file:
 
 
 
-#
+
 output8_file_path = f"C/10001m3u"
 
-#
+
 limited_channels = limit_channel_list(channel_list)
 
 with open(output8_file_path, 'w', encoding='utf-8') as output_file:
@@ -194,7 +195,7 @@ with open(output8_file_path, 'w', encoding='utf-8') as output_file:
 
 
 
-#
+
 output11_file_path = f"C/dan"
 
 limited_channels = limit_channel_list(channel_list)
