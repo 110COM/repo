@@ -1559,7 +1559,7 @@ CCTV17,http://112.235.202.244:9901/tsfile/live/0019_1.m3u8?key=txiptv&playlive=1
 CCTV17,http://121.19.134.142:808/tsfile/live/0017_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV17,http://112.235.202.94:9901/tsfile/live/0019_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV17,http://112.235.200.253:9901/tsfile/live/0019_1.m3u8?key=txiptv&playlive=1&authid=0
-CCTV少儿超,http://111.74.155.231:9901/tsfile/live/0014_1.m3u8?key=txiptv&playlive=0&authid=0
+
 
 上海卫视,http://106.46.114.29:8011/tsfile/live/0107_1.m3u8?key=txiptv&playlive=0&authid=0
 上海卫视,http://59.62.8.250:9901/tsfile/live/0107_1.m3u8?key=txiptv&playlive=1&authid=0
