@@ -1,3 +1,7 @@
+import os
+import re
+
+
 cctv_channels = []
 other_channels = []
 satellite_channels = []
