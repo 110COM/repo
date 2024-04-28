@@ -198,6 +198,8 @@ other_channels2_sorted = group_and_sort_channels(other_channels2)
 
 #
 def limit_channel_list(channel_list, limit=7):
+    print("Starting limit_channel_list function...")
+    print("channel_list:", channel_list)  # 输出 channel_list 的值
     name_counts = {}
     limited_list = []
     for name, url in channel_list:
