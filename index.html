@@ -1,124 +1,17 @@
 <!DOCTYPE html>
-<!-- This Source Code Form is subject to the terms of the Mozilla Public
-   - License, v. 2.0. If a copy of the MPL was not distributed with this
-   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
-<html data-l10n-sync="true" lang="zh-CN" dir="ltr"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src chrome:; object-src 'none'">
-    <meta name="color-scheme" content="light dark">
-    <title data-l10n-id="neterror-dns-not-found-title">找不到服务器</title>
-    <link rel="stylesheet" href="chrome://global/skin/aboutNetError.css" type="text/css" media="all">
-    <link rel="icon" id="favicon" href="chrome://global/skin/icons/info.svg">
-    <link rel="localization" href="branding/brand.ftl">
-    <link rel="localization" href="toolkit/neterror/certError.ftl">
-    <link rel="localization" href="toolkit/neterror/netError.ftl">
-  </head>
-  <body class="neterror">
-    <div class="container">
-      <div id="text-container">
-        <!-- Error Title -->
-        <div class="title">
-          <h1 class="title-text" data-l10n-id="dnsNotFound-title">呃…找不到此网站。</h1>
-        </div>
-
-        <!-- Short Description -->
-        <p id="errorShortDesc">我们无法连接至 a.con168.dynv6.net 的服务器。</p>
-        <p id="errorShortDesc2"></p>
-
-        <div id="errorWhatToDo" hidden="">
-          <p id="errorWhatToDoTitle" data-l10n-id="certerror-what-can-you-do-about-it-title">您可以做什么？</p>
-          <p id="badStsCertExplanation" hidden=""></p>
-          <p id="errorWhatToDoText"></p>
-        </div>
-
-        <!-- Long Description -->
-        <div id="errorLongDesc"><span data-l10n-id="neterror-dns-not-found-hint-header"><strong>若您确认输入的是正确网址，可以：</strong></span><ul><li data-l10n-id="neterror-dns-not-found-hint-try-again">稍后再试</li><li data-l10n-id="neterror-dns-not-found-hint-check-network">检查您的网络连接</li><li data-l10n-id="neterror-dns-not-found-hint-firewall">检查您是否有联网权限（可能已接入网络，但被防火墙阻止）</li></ul></div>
-
-        <div id="trrOnlyContainer" hidden="">
-          <p id="trrOnlyMessage"></p>
-          <div class="trr-message-container">
-            <span id="trrOnlyDescription"></span>
-            <p id="trrLearnMoreContainer" hidden="">
-              <a id="trrOnlylearnMoreLink" target="_blank" rel="noopener noreferrer" data-l10n-id="neterror-learn-more-link">详细了解…</a>
-            </p>
-          </div>
-          <p data-l10n-id="neterror-dns-not-found-trr-third-party-warning2">您可以继续使用默认 DNS 解析器，但第三方将有可能得知您访问过哪些网站。</p>
-        </div>
-
-        <div id="nativeFallbackContainer" hidden="">
-          <p id="nativeFallbackMessage"></p>
-          <div class="trr-message-container">
-            <span id="nativeFallbackDescription"></span>
-            <p id="nativeFallbackLearnMoreContainer" hidden="">
-              <a id="nativeFallbackLearnMoreLink" target="_blank" rel="noopener noreferrer" data-l10n-id="neterror-learn-more-link">详细了解…</a>
-            </p>
-          </div>
-          <p data-l10n-id="neterror-dns-not-found-trr-third-party-warning2">您可以继续使用默认 DNS 解析器，但第三方将有可能得知您访问过哪些网站。</p>
-        </div>
-
-        <p id="tlsVersionNotice" hidden=""></p>
-
-        <p id="learnMoreContainer" hidden="">
-          <a id="learnMoreLink" target="_blank" rel="noopener noreferrer" data-telemetry-id="learn_more_link" data-l10n-id="neterror-learn-more-link" href="https://support.mozilla.org/1/firefox/125.0.2/WINNT/zh-CN/connection-not-secure">详细了解…</a>
-        </p>
-
-        <div id="openInNewWindowContainer" class="button-container" hidden="">
-          <p>
-            <a id="openInNewWindowButton" target="_blank" rel="noopener noreferrer">
-              <button class="primary" data-l10n-id="open-in-new-window-for-csp-or-xfo-error">在新窗口中打开网站</button></a>
-          </p>
-        </div>
-
-        <!-- UI for option to report certificate errors to Mozilla. Removed on
-             init for other error types .-->
-        <div id="prefChangeContainer" class="button-container" hidden="">
-          <p data-l10n-id="neterror-pref-reset">看来可能是您的网络安全设置造成了此问题。您想还原到默认设置吗？</p>
-          <button id="prefResetButton" class="primary" data-l10n-id="neterror-pref-reset-button">恢复默认设置</button>
-        </div>
-
-        <div id="certErrorAndCaptivePortalButtonContainer" class="button-container" hidden="">
-          <button id="returnButton" class="primary" data-telemetry-id="return_button_top" data-l10n-id="neterror-return-to-previous-page-recommended-button">返回上一页（推荐）</button>
-          <button id="openPortalLoginPageButton" class="primary" data-l10n-id="neterror-open-portal-login-page-button" hidden="">打开网络登录页面</button>
-          <button id="certErrorTryAgainButton" class="primary try-again" data-l10n-id="neterror-try-again-button" hidden="">重试</button>
-          <button id="advancedButton" data-telemetry-id="advanced_button" data-l10n-id="neterror-advanced-button">高级…</button>
-        </div>
-      </div>
-
-      <div id="netErrorButtonContainer" class="button-container"><button id="neterrorTryAgainButton" class="primary try-again" data-l10n-id="neterror-try-again-button" data-telemetry-id="try_again_button">重试</button>
-        
-        <button id="trrExceptionButton" data-l10n-id="neterror-add-exception-button" data-telemetry-id="add_exception_button" hidden="">总是继续打开此网站</button>
-        <button id="trrSettingsButton" data-l10n-id="neterror-settings-button" data-telemetry-id="settings_button" hidden="">更改 DNS 设置</button>
-        <button id="nativeFallbackContinueThisTimeButton" data-l10n-id="neterror-trr-continue-this-time" data-telemetry-id="continue_button" hidden="">此次仍继续</button>
-        <button id="nativeFallbackIgnoreButton" data-l10n-id="neterror-disable-native-feedback-warning" data-telemetry-id="disable_warning" hidden="">总是继续打开</button>
-      </div>
-
-      <div class="advanced-panel-container">
-        <div id="badCertAdvancedPanel" class="advanced-panel" hidden="">
-          <p id="badCertTechnicalInfo"></p>
-          <a id="viewCertificate" href="javascript:void(0)" data-l10n-id="neterror-view-certificate-link">查看证书</a>
-          <div id="advancedPanelButtonContainer" class="button-container">
-            <button id="advancedPanelReturnButton" class="primary" data-telemetry-id="return_button_adv" data-l10n-id="neterror-return-to-previous-page-recommended-button">返回上一页（推荐）</button>
-            <button id="advancedPanelTryAgainButton" class="primary try-again" data-l10n-id="neterror-try-again-button" hidden="">重试</button>
-            <button id="exceptionDialogButton" data-telemetry-id="exception_button" data-l10n-id="neterror-override-exception-button">接受风险并继续</button>
-          </div>
-        </div>
-
-        <div id="blockingErrorReporting" class="advanced-panel" hidden="">
-          <p class="toggle-container-with-text">
-            <input type="checkbox" id="automaticallyReportBlockingInFuture" role="checkbox">
-            <label for="automaticallyReportBlockingInFuture" data-l10n-id="neterror-error-reporting-automatic">报告此类错误，帮助 Mozilla 识别与拦截恶意网站</label>
-          </p>
-        </div>
-
-        <div id="certificateErrorDebugInformation" class="advanced-panel" hidden="">
-          <button id="copyToClipboardTop" data-telemetry-id="clipboard_button_top" data-l10n-id="neterror-copy-to-clipboard-button">复制文本到剪贴板</button>
-          <div id="certificateErrorText"></div>
-          <button id="copyToClipboardBottom" data-telemetry-id="clipboard_button_bot" data-l10n-id="neterror-copy-to-clipboard-button">复制文本到剪贴板</button>
-        </div>
-      </div>
-    </div>
-    <script src="chrome://global/content/neterror/aboutNetErrorCodes.js"></script>
-    <script type="module" src="chrome://global/content/aboutNetError.mjs"></script>
-  
-
-</body></html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="10">
+    <title>Loading...</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+</body>
+</html>
