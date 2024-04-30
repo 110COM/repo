@@ -19,7 +19,7 @@ channels = []
 error_channels = []
 
 
-speed_file_path = f"jiee/itv_speed.txt"
+speed_file_path = f"jiee/sud.txt"  
 with open(speed_file_path, 'r', encoding='utf-8') as file:
     for line in file:
         line = line.strip()
@@ -232,7 +232,7 @@ channel_lists = {
 
 
 
-output5_file_path = f"C/hyd"
+output5_file_path = f"a/cts"
 
 cctv_channels = channel_lists.get("央视频道", [])
 with open(output5_file_path, 'w', encoding='utf-8') as output_file:
@@ -242,7 +242,7 @@ with open(output5_file_path, 'w', encoding='utf-8') as output_file:
 
 
 
-output6_file_path = f"C/hydm3u"
+output6_file_path = f"a/cts8"
 
 cctv_channels = channel_lists.get("央视频道", [])
 with open(output6_file_path, 'w', encoding='utf-8') as output_file:
@@ -256,7 +256,7 @@ with open(output6_file_path, 'w', encoding='utf-8') as output_file:
 
 
 
-output7_file_path = f"C/10001"
+output7_file_path = f"a/mut"
 
 # 写入所有频道列表并限制数量
 limited_channels = limit_channel_list(channel_list)
@@ -272,7 +272,7 @@ with open(output7_file_path, 'w', encoding='utf-8') as output_file:
 
 
 
-output8_file_path = f"C/10001m3u"
+output8_file_path = f"a/mut8"
 
 
 limited_channels = limit_channel_list(channel_list)
@@ -288,7 +288,7 @@ with open(output8_file_path, 'w', encoding='utf-8') as output_file:
 
 
 
-output11_file_path = f"C/dan"
+output11_file_path = f"a/dan8"
 
 limited_channels = limit_channel_list(channel_list)
 
@@ -303,14 +303,6 @@ with open(output11_file_path, 'w', encoding='utf-8') as output_file:
                 written_channels.add(name)
         output_file.write("\n")
 
-
-
-            
-            
+     
 
 print("\n已完成")        
-
-            
-            
-
-print("\n已完成")
