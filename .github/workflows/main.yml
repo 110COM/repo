@@ -1,11 +1,11 @@
 name: its
 
 on:
-  schedule:
+  #schedule:
     #- cron: '20 8,23 * * *'
-  push:
-    branches:
-      - main
+  #push:
+    #branches:
+      #- main
   workflow_dispatch:
 
 
