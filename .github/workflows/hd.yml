@@ -48,7 +48,9 @@ jobs:
 
       - name: Run hd
         run: python ${{ github.workspace }}/por/hd.py
-        
+
+      - name: Run ty
+        run: python ${{ github.workspace }}/por/ty.py
 
 
       - name: 提交更改
