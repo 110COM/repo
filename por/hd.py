@@ -272,7 +272,7 @@ with open(output7_file_path, 'w', encoding='utf-8') as output_file:
 
 
 
-output8_file_path = f"a/mut8"
+output8_file_path = f"a/mut8.m3u"
 
 
 limited_channels = limit_channel_list(channel_list)
