@@ -22,7 +22,7 @@ def read_file_content(file_path):
 def main():
 	
     du_file_path = f"a/cts8" 
-    ce_file_path = f"a/ce"    
+    ce_file_path = f"a/ce.m3u"    
 
 
     # 读取 du 文件内容
