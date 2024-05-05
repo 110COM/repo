@@ -3676,7 +3676,6 @@ CCTV高尔夫网球,http://8.218.11.245:91/api/channel/9vem6/cctvgefwq.m3u8
 明珠台,http://8.218.11.245:91/api/channel/9vem6/169E10.m3u8
 TVB星河,http://8.218.11.245:91/api/channel/9vem6/0l8935.m3u8
 TVB星河,http://8.218.11.245:91/api/channel/9vem6/2Yo34p.m3u8
-J2,http://8.218.11.245:91/api/channel/9vem6/S5W41v.m3u8
 无线新闻2,http://8.218.11.245:91/api/channel/9vem6/4259ZW.m3u8
 无线新闻,http://8.218.11.245:91/api/channel/9vem6/gM78iY.m3u8
 纬来体育,http://8.218.11.245:91/api/channel/9vem6/V8y551.m3u8
