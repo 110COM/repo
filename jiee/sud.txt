@@ -724,7 +724,7 @@ CCTV第一剧场,http://183.239.226.235:9901/tsfile/live/1049_1.m3u8?key=txiptv&
 广东卫视,http://124.90.209.94:85/tsfile/live/0125_1.m3u8?key=txiptv&playlive=0&authid=0
 广东卫视,http://36.34.56.35:40446/tsfile/live/1005_1.m3u8?key=txiptv&playlive=0&authid=0
 广西卫视,http://110.81.206.138:49231/tsfile/live/23055_1.m3u8?key=txiptv&playlive=1&authid=0
-广场舞,http://171.108.239.74:8181/tsfile/live/1015_1.m3u8?key=txiptv&playlive=1&authid=0
+
 广东卫视,http://112.123.208.64:40446/tsfile/live/1005_1.m3u8?key=txiptv&playlive=0&authid=0
 广西影视,http://171.108.239.74:8181/tsfile/live/1097_1.m3u8?key=txiptv&playlive=1&authid=0
 广西卫视,http://171.108.239.74:8181/tsfile/live/1058_1.m3u8?key=txiptv&playlive=1&authid=0
