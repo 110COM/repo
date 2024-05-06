@@ -218,10 +218,10 @@ def limit_channel_list(channel_list, limit=7):
     
 
 channel_lists = {
-    "央视频道": cctv_channels_sorted,
-    "卫视频道": satellite_channels_sorted,
-    "体育频道": sport_channels_sorted,
-    "少儿频道": child_channels_sorted,
+    "央视": cctv_channels_sorted,
+    "卫视": satellite_channels_sorted,
+    "体育": sport_channels_sorted,
+    "少儿": child_channels_sorted,
     "其它": other_channels_sorted,
     "广东":guangdong_channels_sorted,
     "湖南":hunan_channels_sorted,
