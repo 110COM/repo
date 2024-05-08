@@ -234,7 +234,7 @@ channel_lists = {
 
 output5_file_path = f"a/cts"
 
-cctv_channels = channel_lists.get("央视频道", [])
+cctv_channels = channel_lists.get("央视", [])
 with open(output5_file_path, 'w', encoding='utf-8') as output_file:
     output_file.write(f"央视频道,#genre#\n")  # 写入分类信息
     for name, url in limit_channel_list(cctv_channels):
@@ -244,7 +244,7 @@ with open(output5_file_path, 'w', encoding='utf-8') as output_file:
 
 output6_file_path = f"a/cts8"
 
-cctv_channels = channel_lists.get("央视频道", [])
+cctv_channels = channel_lists.get("央视", [])
 with open(output6_file_path, 'w', encoding='utf-8') as output_file:
     output_file.write('#EXTM3U\n')  # 写入第一行
     group_title = "央视频道"  # 默认分组标题为央视频道
