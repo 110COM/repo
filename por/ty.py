@@ -83,3 +83,37 @@ def replace_line(file_path, line_number, new_content):
 
 if __name__ == "__main__":
     main()
+
+
+
+
+
+# transform
+def convert_m3u_to_txt():
+
+    result = []
+
+    with open("a/ce.m3u", 'r', encoding='utf-8') as m3u_file:
+        lines = m3u_file.readlines()
+
+    for line in lines:
+        if not line:
+            continue
+        
+        if line.startswith("EXTM3U"):
+            continue
+            
+        if line.strip().startswith("http"):
+            url = line.strip()
+            result.append(f"{name},{url}")
+        else:
+            name = line.strip().split(",")[-1].strip()
+
+    with open("a/cet", 'w', encoding='utf-8') as txt_file:
+        for item in result:
+            txt_file.write(item + '\n')
+
+    #print(f"转换完成，已保存为 {output_file_path}")
+
+if __name__ == "__main__":
+    convert_m3u_to_txt()
