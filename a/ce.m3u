@@ -10,7 +10,7 @@ http://zhz.gxhzxw.com:2935/live/HZXW-HD/playlist.m3u8
 #EXTINF:-1,测试5
 https://sjlivecdn9.cbg.cn/204912315959/app_2/_definst_/ls_2.stream/chunklist.m3u8
 #EXTINF:-1,测试6
-http://112.95.198.7:59901/tsfile/live/0002_1.m3u8?key=txiptv&playlive=1&authid=0
+http://60.220.202.10:24333/tsfile/live/0002_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1,测试7
 http://123.132.233.194:352/tsfile/live/0007_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1,临时1
