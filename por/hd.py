@@ -98,6 +98,11 @@ child_channels = []
 guangdong_channels = []
 hunan_channels = []
 zhejiang_channels = []
+hebei_channels = []
+henan_channels = []
+shandong_channels = []
+fujian_channels = []
+guangxi_channels = []
 other_channels2 = []
 
 
@@ -136,6 +141,12 @@ with open(in1_file_path, 'r',  encoding='utf-8') as file:
             'guangdong_channels': ['广东', '广州', '惠州', '河源', '东莞', '梅州', '深圳', '潮州', '珠江', '揭西'],
             'hunan_channels': ['湖南', '金鹰', '茶'],
             'zhejiang_channels': ['浙江', '杭州', '西湖明珠', '宁波', '上虞', '丽水', '松阳', '永嘉', '温州', '绍兴', '苍南', '衢州', '诸暨', '遂昌', '青田', '龙泉']
+            'hebei_channels': ['河北', '保定', '张家口', '涿州', '石家庄', '邯郸', '魏县', '定州', '安新', '定兴', '涞源'],
+            'henan_channels': ['河南', '南阳', '郑州'],
+            'shandong_channels': ['山东', '济南', '济宁', '胶州'],
+            'fujian_channels': ['福建'],
+            'guangxi_channels': ['广西', '南宁']
+        
         }
 
 
@@ -191,6 +202,12 @@ other_channels_sorted = group_and_sort_channels(other_channels)
 guangdong_channels_sorted = group_and_sort_channels(guangdong_channels)
 hunan_channels_sorted = group_and_sort_channels(hunan_channels)
 zhejiang_channels_sorted = group_and_sort_channels(zhejiang_channels)
+hebei_channels_sorted = group_and_sort_channels(hebei_channels)
+henan_channels_sorted = group_and_sort_channels(henan_channels)
+shandong_channels_sorted = group_and_sort_channels(shandong_channels)
+fujian_channels_sorted = group_and_sort_channels(fujian_channels)
+guangxi_channels_sorted = group_and_sort_channels(guangxi_channels)
+
 other_channels2_sorted = group_and_sort_channels(other_channels2)
 
 
@@ -226,6 +243,11 @@ channel_lists = {
     "广东":guangdong_channels_sorted,
     "湖南":hunan_channels_sorted,
     "浙江":zhejiang_channels_sorted,
+    "河北":hebei_channels_sorted,
+    "河南":henan_channels_sorted,
+    "山东":shandong_channels_sorted,
+    "福建":fujian_channels_sorted,
+    "广西":guangxi_channels_sorted,
 }
 
 
