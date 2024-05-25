@@ -136,7 +136,7 @@ with open(in1_file_path, 'r',  encoding='utf-8') as file:
         channel_keywords = {
             'cctv_channels': ['CCTV'],
             'sport_channels': ['CCTV5', '体育', '足球'],
-            'child_channels': ['CCTV14', '卡', '少儿', '哈哈炫动'],
+            'child_channels': ['CCTV14', '卡通', '少儿', '哈哈炫动', '动漫', '动画'],
             'satellite_channels': ['卫视'],
             'guangdong_channels': ['广东', '广州', '惠州', '河源', '东莞', '梅州', '深圳', '潮州', '珠江', '揭西'],
             'hunan_channels': ['湖南', '金鹰', '茶'],
