@@ -28,11 +28,8 @@ jobs:
         
       - name: Install dependencies
         run: |
-          sudo apt-get update
-          python -m pip install aiohttp
-          #pip install selenium requests futures opencv-python eventlet
-          pip install selenium requests futures eventlet
-          sudo apt-get install ffmpeg
+          pip install aiohttp requests
+          
           
 
 
