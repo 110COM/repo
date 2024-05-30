@@ -60,7 +60,7 @@ async def check_url(name, url, session):
             if response.status == 200:
                 return name, url
     except Exception as e:
-        #print(f"检查 {url} 时出错: {e}")
+        print(f"检查 {url} 时出错: {e}")
         pass
     return None
 
@@ -169,7 +169,7 @@ valid_name_url_resolutions = asyncio.run(process_resolutions(valid_name_url_pair
 with open("jiee/gather", 'a', encoding='utf-8') as file:
     for name, url in valid_name_url_resolutions:
         line = f"{name},{url}"
-        #print(line)
+        print(line)
         file.write(line + "\n")
 
 print(f"有效数据已写入")
