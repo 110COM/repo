@@ -31,6 +31,7 @@ jobs:
           sudo apt-get update
           python -m pip install aiohttp
           pip install requests
+          pip install selenium requests futures eventlet
           sudo apt-get install ffmpeg
           
 
