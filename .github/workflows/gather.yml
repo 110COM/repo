@@ -28,7 +28,8 @@ jobs:
         
       - name: Install dependencies
         run: |
-          pip install aiohttp requests
+          sudo apt-get update
+          python -m pip install aiohttp requests
           sudo apt-get install ffmpeg
           
 
