@@ -1,0 +1,213 @@
+import os
+import re
+import time
+import asyncio
+import aiohttp
+import concurrent.futures
+import subprocess
+import json
+import requests
+import threading
+from queue import Queue
+import random
+from collections import defaultdict
+
+
+
+task_queue = Queue()
+
+
+results = []
+channels = []
+error_channels = []
+
+
+speed_file_path = f"jiee/sud.txt"  
+with open(speed_file_path, 'r', encoding='utf-8') as file:
+    for line in file:
+        line = line.strip()
+        if line and ',' in line:
+            try:
+                channel_name, channel_url = line.split(',')
+                channels.append((channel_name.strip(), channel_url.strip()))
+            except ValueError:
+                continue
+
+
+
+def get_resolution(name, url, timeout=10):
+    process = None
+    try:
+        cmd = ['ffprobe', '-print_format', 'json', '-show_streams', '-select_streams', 'v', url]
+        process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        stdout, stderr = process.communicate(timeout=timeout)
+        info = json.loads(stdout.decode())
+        width = int(info['streams'][0]['width'])
+        height = int(info['streams'][0]['height'])
+        if width >= 1920 and height >= 1080:
+            return name, url
+    except subprocess.TimeoutExpired:
+        process.kill()
+    except Exception as e:
+        pass
+    finally:
+        if process:
+            process.wait()
+    return None
+
+
+
+def worker():
+    while True:
+        channel_name, channel_url = task_queue.get()
+        try:
+            resolution_info = get_resolution(channel_name, channel_url, timeout=15)
+            if resolution_info:
+                results.append(resolution_info)
+        except Exception as e:
+            error_channels.append((channel_name, channel_url))
+        task_queue.task_done()
+
+
+
+
+
+num_threads = 25
+for _ in range(num_threads):
+    t = threading.Thread(target=worker, daemon=True)
+    t.start()
+
+
+for channel in channels:
+    task_queue.put(channel)
+
+
+task_queue.join()
+
+
+out1_file_path = f"jiee/hd"
+with open(out1_file_path, 'w', encoding='utf-8') as file:
+    for name, url in results:
+        file.write(f"{name},{url}\n")
+        
+
+
+
+        
+
+
+try:
+    # 打开并读取参考.txt 文件，编码为utf8
+    with open("jiee/local", 'r', encoding='utf-8') as reference_file:
+        reference_data = reference_file.read()
+
+    # 把读取的数据写入到原始.txt 文件末尾
+    with open("jiee/hd", 'a', encoding='utf-8') as original_file:
+        original_file.write('\n')
+        original_file.write(reference_data)
+
+    # 完成后，打印消息
+    print("已完成追加数据！")
+
+except FileNotFoundError as e:
+    print(f"文件未找到：{e.filename}")
+except Exception as e:
+    print(f"发生错误：{e}")
+
+
+
+        
+
+
+
+# 定义常量
+LIMIT_PER_GROUP = 7
+
+def process_file(input_file):
+    n = LIMIT_PER_GROUP
+
+    with open(input_file, 'r', encoding='utf8') as file:
+        lines = file.readlines()
+
+    # 过滤条件
+    def is_valid_line(line):
+        return line.strip() and '#' not in line and ',' in line
+
+    # 过滤空行和包含 '#' 的行，跳过不包含英文逗号的行
+    filtered_lines = [line.strip() for line in lines if is_valid_line(line)]
+
+    # 对读取的数据进行随机排序
+    random.shuffle(filtered_lines)
+
+    # 解析数据
+    data = []
+    for line in filtered_lines:
+        name, url = line.split(',', 1)
+        data.append((name.strip(), url.strip()))
+
+    # 按 name 分组
+    name_groups = defaultdict(list)
+    for name, url in data:
+        name_groups[name].append((name, url))
+
+    data1 = []
+    data2 = defaultdict(list)
+    
+    for name, items in name_groups.items():
+        if len(items) > 3 * n:
+            data2[name] = items
+        else:
+            data1.extend(items)
+
+    # 准备分组文件内容
+    group1 = []
+    group2 = []
+    group3 = []
+
+    # 将 data2 分组处理
+    for name, items in data2.items():
+        group1.extend(items[:n])
+        remaining_items = items[n:]
+        group2.extend(remaining_items[:n])
+        remaining_items = remaining_items[n:]
+        group3.extend(remaining_items[:n])
+    
+    # 将 data1 随机选择并写入每个组
+    def add_data1_to_group(group):
+        random.shuffle(data1)
+        count_per_name = defaultdict(int)
+        for name, url in data1:
+            if count_per_name[name] < n:
+                group.append((name, url))
+                count_per_name[name] += 1
+
+    add_data1_to_group(group1)
+    add_data1_to_group(group2)
+    add_data1_to_group(group3)
+
+    def write_to_file(filename, data):
+        with open(filename, 'w', encoding='utf8') as file:
+            for name, url in data:
+                file.write(f"{name},{url}\n")
+
+
+    # 定义文件路径
+    #output_file1 = os.path.join(script_dir, '分组1.txt')
+	output_file1 = 'jiee/fenzu1'
+	
+    #output_file2 = os.path.join(script_dir, '分组2.txt')
+	output_file2 = 'jiee/fenzu2'
+	
+    #output_file3 = os.path.join(script_dir, '分组3.txt')
+	output_file3 = 'jiee/fenzu3'
+
+    # 写入文件
+    write_to_file(output_file1, group1)
+    write_to_file(output_file2, group2)
+    write_to_file(output_file3, group3)
+
+    print("数据已分组完毕！")
+
+# 调用函数，设置剩余.txt文件的路径
+input_file_path = f"jiee/hd"
+process_file(input_file_path)
