@@ -1,0 +1,58 @@
+name: hdaddgroup
+
+on:
+  schedule:
+    - cron: '0 8,23 * * *'
+  #push:
+    #branches:
+      #- main
+  workflow_dispatch:
+
+
+jobs:
+  hdaddgroup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+    
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.12.2'
+
+      - name: Update pip
+        run: python -m pip install --upgrade pip
+        
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          python -m pip install aiohttp
+          #pip install selenium requests futures opencv-python eventlet
+          pip install selenium requests futures eventlet
+          sudo apt-get install ffmpeg
+          
+
+
+      - name: Run hdaddgroup
+        run: python ${{ github.workspace }}/por/hdaddgroup
+
+      - name: Run creat
+        run: python ${{ github.workspace }}/por/creat
+
+      - name: Run ty
+        run: python ${{ github.workspace }}/por/ty.py
+
+
+      - name: 提交更改
+        run: |
+          git config --local user.email "6fybq3a5@nqmo.com"
+          git config --local user.name "o1il"
+          git add .
+          git commit -m "Add generated files"
+          #git pull --rebase
+          git push -f
+
+        
