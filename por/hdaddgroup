@@ -193,13 +193,13 @@ def process_file(input_file):
 
     # 定义文件路径
     #output_file1 = os.path.join(script_dir, '分组1.txt')
-	output_file1 = 'jiee/fenzu1'
+    output_file1 = 'jiee/fenzu1'
 	
     #output_file2 = os.path.join(script_dir, '分组2.txt')
-	output_file2 = 'jiee/fenzu2'
+    output_file2 = 'jiee/fenzu2'
 	
     #output_file3 = os.path.join(script_dir, '分组3.txt')
-	output_file3 = 'jiee/fenzu3'
+    output_file3 = 'jiee/fenzu3'
 
     # 写入文件
     write_to_file(output_file1, group1)
