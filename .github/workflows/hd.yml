@@ -1,8 +1,8 @@
 name: its
 
 on:
-  schedule:
-    - cron: '0 8,23 * * *'
+  #schedule:
+    #- cron: '0 8,23 * * *'
   #push:
     #branches:
       #- main
