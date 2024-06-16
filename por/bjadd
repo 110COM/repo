@@ -1,0 +1,92 @@
+import requests
+import re
+import os
+import random
+
+
+
+urls = [
+
+    "http://d.dds.us.kg/a/mut",
+    
+    ]
+    
+timeout = 10  # 超时时间为10秒
+
+keywords = ["北京体育休闲", "北京国际", "北京影视", "北京文艺", "北京新闻", "北京生活", "北京纪实科教", "北京财经", "北京淘Baby", "北京淘剧场", "北京淘娱乐", "北京淘电影", "北京淘精彩", "北京萌宠TV", "北京青年"]  # 筛选关键词列表
+
+filter_keywords = ["#", "ottrrs", "dbiptv", "[", "广播", "直播", "/PLTV/"]  # 过滤关键词列表
+
+keywords2 = ["凤凰中文"]  # 修改name关键词列表
+
+
+final_lines = set()
+
+
+for url in urls:
+    try:
+        response = requests.get(url, timeout=timeout)
+        response.encoding = 'utf-8'
+        if response.status_code == 200:
+            # 获取页面内容
+            content = response.text
+            
+            # 打印页面内容
+            #print(f"内容来自 {url}:")
+            #print(content)
+            
+            # 关键词筛选和过滤
+            lines = content.split('\n')
+            for line in lines:
+                if any(keyword in line for keyword in keywords):
+                    if not any(fkeyword in line for fkeyword in filter_keywords):
+                        # print(line)
+                        final_lines.add(line.strip())  # 在这里添加 strip() 方法以去除行末尾的空白字符
+        else:
+            print(f"无法打开链接: {url}")
+    except requests.Timeout:
+        print(f"超时未打开: {url}")
+    except requests.RequestException as e:
+        print(f"请求错误 {url}: {e}")
+
+
+def replace_name(name):
+    # 使用正则表达式将所有的关键词及其变体替换为该关键词
+    for keyword in keywords2:
+        name = re.sub(fr'{keyword}.*|.*{keyword}', keyword, name)
+    
+    
+    name = re.sub(r'\b凤凰卫视\b', '凤凰中文', name)
+    
+    return name
+
+
+
+processed_lines = []
+for line in final_lines:
+    parts = line.split(',', 1)
+    if len(parts) == 2:  # 确保行内容正确分割
+        name = parts[0].strip()
+        url = parts[1].strip()
+        name = replace_name(name)
+        processed_lines.append(f"{name},{url}")
+
+
+
+random.shuffle(processed_lines)
+
+unique_processed_lines = sorted(set(processed_lines), key=lambda x: x.split(',')[0])
+
+
+
+with open("dk/mut", "r", encoding="utf-8") as file:
+    lines = file.readlines()
+
+new_lines = [line + "\n" for line in unique_processed_lines] + ["\n"] + lines
+
+with open("bj/mut", "w", encoding="utf-8") as file:
+    file.write("北京,#genre#\n")
+    file.writelines(new_lines)
+
+
+
