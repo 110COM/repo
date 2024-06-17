@@ -79,10 +79,23 @@ unique_processed_lines = sorted(set(processed_lines), key=lambda x: x.split(',')
 
 
 
+with open("jiee/bjzb", "r", encoding="utf-8") as file:
+    original_lines = file.read().splitlines()
+
+
+combined_lines = unique_processed_lines + original_lines
+
+
+random.shuffle(combined_lines)
+combined_lines.sort()
+
+
+
+
 with open("dk/mut", "r", encoding="utf-8") as file:
     lines = file.readlines()
 
-new_lines = [line + "\n" for line in unique_processed_lines] + ["\n"] + lines
+new_lines = [line + "\n" for line in combined_lines] + ["\n"] + lines
 
 with open("bj/mut", "w", encoding="utf-8") as file:
     file.write("北京,#genre#\n")
