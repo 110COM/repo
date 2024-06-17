@@ -46,7 +46,7 @@ jobs:
         run: python ${{ github.workspace }}/por/ty.py
 
       - name: Run bjadd
-        run: python ${{ github.workspace }}/por/bjadd.py
+        run: python ${{ github.workspace }}/por/bjadd
 
 
       - name: 提交更改
