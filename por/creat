@@ -204,7 +204,7 @@ with open(output6_file_path, 'w', encoding='utf-8') as output_file:
     output_file.write('#EXTM3U\n')  # 写入第一行
     group_title = "央视频道"  # 默认分组标题为央视频道
     for name, url in limit_channel_list(cctv_channels):
-        output_file.write(f"#EXTINF:-1 tvg-name={name} tvg-logo="https://live.fanmingming.com/tv/{name}.png" group-title=\"{group_title}\",{name}\n")
+        output_file.write(f"#EXTINF:-1 tvg-name=\"{name}\" tvg-logo=\"https://live.fanmingming.com/tv/{name}.png\" group-title=\"{group_title}\",{name}\n")
         output_file.write(f"{url}\n")
         
 
@@ -236,7 +236,7 @@ with open(output8_file_path, 'w', encoding='utf-8') as output_file:
     output_file.write('#EXTM3U\n')  # 写入第一行
     for channel_name, channel_list in channel_lists.items():
         for name, url in limit_channel_list(channel_list):
-            output_file.write(f"#EXTINF:-1 tvg-name={name} tvg-logo="https://live.fanmingming.com/tv/{name}.png" group-title=\"{channel_name}\",{name}\n")
+            output_file.write(f"#EXTINF:-1 tvg-name=\"{name}\" tvg-logo=\"https://live.fanmingming.com/tv/{name}.png\" group-title=\"{channel_name}\",{name}\n")
             output_file.write(f"{url}\n")
 
 
@@ -253,7 +253,7 @@ with open(output11_file_path, 'w', encoding='utf-8') as output_file:
         written_channels = set()  # 用于记录已经写入的频道名称
         for name, url in limit_channel_list(channel_list):
             if name not in written_channels:
-                output_file.write(f"#EXTINF:-1 tvg-name={name} tvg-logo="https://live.fanmingming.com/tv/{name}.png" group-title=\"{channel_name}\",{name}\n")
+                output_file.write(f"#EXTINF:-1 tvg-name=\"{name}\" tvg-logo=\"https://live.fanmingming.com/tv/{name}.png\" group-title=\"{channel_name}\",{name}\n")
                 output_file.write(f"{url}\n")
                 written_channels.add(name)
         output_file.write("\n")
@@ -464,7 +464,7 @@ with open(output6_file_path, 'w', encoding='utf-8') as output_file:
     output_file.write('#EXTM3U\n')  # 写入第一行
     group_title = "央视频道"  # 默认分组标题为央视频道
     for name, url in limit_channel_list(cctv_channels):
-        output_file.write(f"#EXTINF:-1 tvg-name={name} tvg-logo="https://live.fanmingming.com/tv/{name}.png" group-title=\"{group_title}\",{name}\n")
+        output_file.write(f"#EXTINF:-1 tvg-name=\"{name}\" tvg-logo=\"https://live.fanmingming.com/tv/{name}.png\" group-title=\"{group_title}\",{name}\n")
         output_file.write(f"{url}\n")
         
 
@@ -496,7 +496,7 @@ with open(output8_file_path, 'w', encoding='utf-8') as output_file:
     output_file.write('#EXTM3U\n')  # 写入第一行
     for channel_name, channel_list in channel_lists.items():
         for name, url in limit_channel_list(channel_list):
-            output_file.write(f"#EXTINF:-1 tvg-name={name} tvg-logo="https://live.fanmingming.com/tv/{name}.png" group-title=\"{channel_name}\",{name}\n")
+            output_file.write(f"#EXTINF:-1 tvg-name=\"{name}\" tvg-logo=\"https://live.fanmingming.com/tv/{name}.png\" group-title=\"{channel_name}\",{name}\n")
             output_file.write(f"{url}\n")
 
 
@@ -513,7 +513,7 @@ with open(output11_file_path, 'w', encoding='utf-8') as output_file:
         written_channels = set()  # 用于记录已经写入的频道名称
         for name, url in limit_channel_list(channel_list):
             if name not in written_channels:
-                output_file.write(f"#EXTINF:-1 tvg-name={name} tvg-logo="https://live.fanmingming.com/tv/{name}.png" group-title=\"{channel_name}\",{name}\n")
+                output_file.write(f"#EXTINF:-1 tvg-name=\"{name}\" tvg-logo=\"https://live.fanmingming.com/tv/{name}.png\" group-title=\"{channel_name}\",{name}\n")
                 output_file.write(f"{url}\n")
                 written_channels.add(name)
         output_file.write("\n")
@@ -724,7 +724,7 @@ with open(output6_file_path, 'w', encoding='utf-8') as output_file:
     output_file.write('#EXTM3U\n')  # 写入第一行
     group_title = "央视频道"  # 默认分组标题为央视频道
     for name, url in limit_channel_list(cctv_channels):
-        output_file.write(f"#EXTINF:-1 tvg-name={name} tvg-logo="https://live.fanmingming.com/tv/{name}.png" group-title=\"{group_title}\",{name}\n")
+        output_file.write(f"#EXTINF:-1 tvg-name=\"{name}\" tvg-logo=\"https://live.fanmingming.com/tv/{name}.png\" group-title=\"{group_title}\",{name}\n")
         output_file.write(f"{url}\n")
         
 
@@ -756,7 +756,7 @@ with open(output8_file_path, 'w', encoding='utf-8') as output_file:
     output_file.write('#EXTM3U\n')  # 写入第一行
     for channel_name, channel_list in channel_lists.items():
         for name, url in limit_channel_list(channel_list):
-            output_file.write(f"#EXTINF:-1 tvg-name={name} tvg-logo="https://live.fanmingming.com/tv/{name}.png" group-title=\"{channel_name}\",{name}\n")
+            output_file.write(f"#EXTINF:-1 tvg-name=\"{name}\" tvg-logo=\"https://live.fanmingming.com/tv/{name}.png\" group-title=\"{channel_name}\",{name}\n")
             output_file.write(f"{url}\n")
 
 
@@ -773,7 +773,7 @@ with open(output11_file_path, 'w', encoding='utf-8') as output_file:
         written_channels = set()  # 用于记录已经写入的频道名称
         for name, url in limit_channel_list(channel_list):
             if name not in written_channels:
-                output_file.write(f"#EXTINF:-1 tvg-name={name} tvg-logo="https://live.fanmingming.com/tv/{name}.png" group-title=\"{channel_name}\",{name}\n")
+                output_file.write(f"#EXTINF:-1 tvg-name=\"{name}\" tvg-logo=\"https://live.fanmingming.com/tv/{name}.png\" group-title=\"{channel_name}\",{name}\n")
                 output_file.write(f"{url}\n")
                 written_channels.add(name)
         output_file.write("\n")
