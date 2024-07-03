@@ -18,10 +18,10 @@ jobs:
 
       - name: 'Setup SSH'
         run: |
-          mkdir -p /home/runner/.ssh
-          echo "${{ secrets.GITCODE_PRIVATE_KEY }}" > /home/runner/.ssh/id_rsa
-          chmod 600 /home/runner/.ssh/id_rsa
-          ssh-keyscan gitcode.com >> /home/runner/.ssh/known_hosts
+          mkdir -p ~/.ssh
+          echo "${{ secrets.GITCODE_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan gitcode.com >> ~/.ssh/known_hosts
           ssh -vvv git@gitcode.com  # 这里尝试手动连接 GitCode，查看详细的 SSH 连接日志
 
       - name: 'Copy files and Push to GitCode'
