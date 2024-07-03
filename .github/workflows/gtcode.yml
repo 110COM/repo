@@ -1,0 +1,42 @@
+name: gtcode
+
+on:
+  #schedule:
+    #- cron: '0 8,23 * * *'
+  #push:
+    #branches:
+      #- main
+  workflow_dispatch:
+
+jobs:
+  to_gtcode:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v2
+
+      - name: 'Setup SSH'
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.GITCODE_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan gitcode.com >> ~/.ssh/known_hosts
+
+      - name: 'Copy files and Push to GitCode'
+        run: |
+          git clone git@gitcode.com:gov/gov.git gitcode-repo
+
+          cp a/mut gitcode-repo/10001
+          cp a/mut8.m3u gitcode-repo/10001m3u
+          cp a/cts gitcode-repo/yhd
+          cp a/cts8 gitcode-repo/hydm3u
+          cp a/dan8 gitcode-repo/dan
+
+          cd gitcode-repo
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git checkout -b 0  # 创建并切换到 den 分支
+          git add 10001 10001m3u yhd hydm3u dan     # 推送
+          git commit -m "Update specific files"
+          git push origin 0  # 推送到 den 分支
