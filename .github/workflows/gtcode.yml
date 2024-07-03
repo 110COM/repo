@@ -26,7 +26,7 @@ jobs:
 
       - name: 'Copy files and Push to GitCode'
         run: |
-          git clone git@gitcode.com:gov/gov.git gitcode-repo
+          git clone git@gitcode.com:gov/1.git gitcode-repo
 
           cp a/mut gitcode-repo/10001
           cp a/mut8.m3u gitcode-repo/10001m3u
