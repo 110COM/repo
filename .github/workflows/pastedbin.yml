@@ -20,11 +20,11 @@ jobs:
 
         run: |
           # Fetch and update for SOURCE1 and TARGET1
-          response1=$(curl -s --max-time 15 "$SOURCE1")
+          response1=$(curl -s --max-time 15 "$SOURCE1" > /dev/null 2>&1)
           if [ -z "$response1" ]; then
-            echo "Failed to fetch content from $SOURCE1 or content is empty"
+            echo "Failed to fetch content from $SOURCE1 or content is empty" > /dev/null 2>&1
             exit 1
           fi
-          curl -X PUT -F "c=$response1" "$TARGET1" --max-time 15
+          curl -X PUT -F "c=$response1" "$TARGET1" --max-time 15 > /dev/null 2>&1
 
 
