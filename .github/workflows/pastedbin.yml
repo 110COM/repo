@@ -1,4 +1,4 @@
-name: Fetch and Update Content
+name: pastedbin
 
 on:
   #schedule:
@@ -7,7 +7,7 @@ on:
 
 
 jobs:
-  fetch-and-update:
+  pastedbin:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
