@@ -1,0 +1,30 @@
+name: Fetch and Update Content
+
+on:
+  #schedule:
+    #- cron: '0 9,24 * * *'
+  workflow_dispatch:
+
+
+jobs:
+  fetch-and-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Fetch and update content
+        env:
+          SOURCE1: ${{ secrets.SOURCE1 }}
+          TARGET1: ${{ secrets.TARGET1 }}
+
+        run: |
+          # Fetch and update for SOURCE1 and TARGET1
+          response1=$(curl -s --max-time 15 "$SOURCE1")
+          if [ -z "$response1" ]; then
+            echo "Failed to fetch content from $SOURCE1 or content is empty"
+            exit 1
+          fi
+          curl -X PUT -F "c=$response1" "$TARGET1" --max-time 15
+
+
