@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  upload:
+  UpFTP-dn-wu:
     runs-on: ubuntu-latest
 
     steps:
