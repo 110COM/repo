@@ -1,9 +1,9 @@
 name: UpFTP-dn-wu
 
 on:
-  push:
-    branches:
-      - main  # 触发推送到主分支时执行
+  #schedule:
+    #- cron: '0 9,24 * * *'
+  workflow_dispatch:
 
 jobs:
   upload:
