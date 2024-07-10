@@ -1,0 +1,51 @@
+name: UpFTP-dn-wu
+
+on:
+  push:
+    branches:
+      - main  # 触发推送到主分支时执行
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Read and Upload to FTP
+      env:
+        FTP_HOST: ${{ secrets.FTP_HOST }}
+        FTP_USER: ${{ secrets.FTP_USER }}
+        FTP_PASS: ${{ secrets.FTP_PASS }}
+      run: |
+        content1=$(cat "a/mut")
+        echo "$content1" | curl --user $FTP_USER:$FTP_PASS --ftp-create-dirs -T - ftp://$FTP_HOST/htdocs/ad/mu.png
+
+
+        content2=$(cat "a/mut8.m3u")
+        echo "$content2" | curl --user $FTP_USER:$FTP_PASS --ftp-create-dirs -T - ftp://$FTP_HOST/htdocs/ad/mu8u.png
+        
+
+        content3=$(cat "a/cts")
+        echo "$content3" | curl --user $FTP_USER:$FTP_PASS --ftp-create-dirs -T - ftp://$FTP_HOST/htdocs/ad/cts.png
+        
+   
+        content4=$(cat "a/cts8")
+        echo "$content4" | curl --user $FTP_USER:$FTP_PASS --ftp-create-dirs -T - ftp://$FTP_HOST/htdocs/ad/ctu8.png
+        
+     
+        content5=$(cat "dk/mut")
+        echo "$content5" | curl --user $FTP_USER:$FTP_PASS --ftp-create-dirs -T - ftp://$FTP_HOST/htdocs/dk/mu.png
+        
+ 
+        content6=$(cat "dk/mut8.m3u")
+        echo "$content6" | curl --user $FTP_USER:$FTP_PASS --ftp-create-dirs -T - ftp://$FTP_HOST/htdocs/dk/mu8u.png
+        
+   
+        content7=$(cat "dk/cts")
+        echo "$content7" | curl --user $FTP_USER:$FTP_PASS --ftp-create-dirs -T - ftp://$FTP_HOST/htdocs/dk/cts.png
+        
+
+        content8=$(cat "dk/cts8")
+        echo "$content8" | curl --user $FTP_USER:$FTP_PASS --ftp-create-dirs -T - ftp://$FTP_HOST/htdocs/dk/ctu8.png
