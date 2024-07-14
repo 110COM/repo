@@ -3452,3 +3452,8 @@ CCTV风云剧场,http://111.225.92.172:33333/hls/78/index.m3u8
 龙祥电影,http://171.108.239.98:8181/tsfile/live/1011_1.m3u8
 龙祥电影,http://171.108.239.79:8181/tsfile/live/1011_1.m3u8
 龙祥电影,http://171.108.239.80:8181/tsfile/live/1011_1.m3u8
+
+欧洲杯-足球,http://hlsbkmgsplive.miguvideo.com/migu/sports/4kvivid05/55/20240605/index.m3u8?&encrypt=
+欧洲杯-足球2k,http://hlsbkmgsplive.miguvideo.com/migu/sports/4kvivid05/221413/20240605/index.m3u8?&encrypt=
+欧洲杯-足球,http://hlsbkmgsplive.miguvideo.com/migu/sports/4kvivid05/57/20240605/index.m3u8?&encrypt=
+欧洲杯-足球2k,http://hlsbkmgsplive.miguvideo.com/migu/sports/4kvivid05/211412/20240605/index.m3u8?&encrypt=
