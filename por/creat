@@ -196,6 +196,13 @@ with open(output5_file_path, 'w', encoding='utf-8') as output_file:
         output_file.write(f"{name},{url}\n")
 
 
+output51_file_path = f"a/cts.png"
+cctv_channels = channel_lists.get("央视", [])
+with open(output51_file_path, 'w', encoding='utf-8') as output_file:
+    output_file.write(f"央视频道,#genre#\n")  # 写入分类信息
+    for name, url in limit_channel_list(cctv_channels):
+        output_file.write(f"{name},{url}\n")
+
 
 output6_file_path = f"a/cts8"
 
@@ -206,8 +213,16 @@ with open(output6_file_path, 'w', encoding='utf-8') as output_file:
     for name, url in limit_channel_list(cctv_channels):
         output_file.write(f"#EXTINF:-1 tvg-name=\"{name}\" tvg-logo=\"https://live.fanmingming.com/tv/{name}.png\" group-title=\"{group_title}\",{name}\n")
         output_file.write(f"{url}\n")
-        
 
+
+output61_file_path = f"a/cts8.png"
+cctv_channels = channel_lists.get("央视", [])
+with open(output61_file_path, 'w', encoding='utf-8') as output_file:
+    output_file.write('#EXTM3U\n')  # 写入第一行
+    group_title = "央视频道"  # 默认分组标题为央视频道
+    for name, url in limit_channel_list(cctv_channels):
+        output_file.write(f"#EXTINF:-1 tvg-name=\"{name}\" tvg-logo=\"https://live.fanmingming.com/tv/{name}.png\" group-title=\"{group_title}\",{name}\n")
+        output_file.write(f"{url}\n")
 
 
 
@@ -224,11 +239,20 @@ with open(output7_file_path, 'w', encoding='utf-8') as output_file:
         output_file.write("\n")
 
 
+output71_file_path = f"a/mut.png"
+# 写入所有频道列表并限制数量
+limited_channels = limit_channel_list(channel_list)
+with open(output71_file_path, 'w', encoding='utf-8') as output_file:
+    for channel_name, channel_list in channel_lists.items():
+        output_file.write(f"{channel_name},#genre#\n")  # 写入分类信息
+        for name, url in limit_channel_list(channel_list):
+            output_file.write(f"{name},{url}\n")
+        output_file.write("\n")
+
 
 
 
 output8_file_path = f"a/mut8.m3u"
-
 
 limited_channels = limit_channel_list(channel_list)
 
@@ -240,6 +264,14 @@ with open(output8_file_path, 'w', encoding='utf-8') as output_file:
             output_file.write(f"{url}\n")
 
 
+output81_file_path = f"a/mut8.png"
+limited_channels = limit_channel_list(channel_list)
+with open(output81_file_path, 'w', encoding='utf-8') as output_file:
+    output_file.write('#EXTM3U\n')  # 写入第一行
+    for channel_name, channel_list in channel_lists.items():
+        for name, url in limit_channel_list(channel_list):
+            output_file.write(f"#EXTINF:-1 tvg-name=\"{name}\" tvg-logo=\"https://live.fanmingming.com/tv/{name}.png\" group-title=\"{channel_name}\",{name}\n")
+            output_file.write(f"{url}\n")
 
 
 
@@ -258,7 +290,20 @@ with open(output11_file_path, 'w', encoding='utf-8') as output_file:
                 written_channels.add(name)
         output_file.write("\n")
 
-     
+
+output111_file_path = f"a/dan8.png"
+limited_channels = limit_channel_list(channel_list)
+with open(output111_file_path, 'w', encoding='utf-8') as output_file:
+    output_file.write('#EXTM3U\n')  # 写入第一行
+    for channel_name, channel_list in channel_lists.items():
+        written_channels = set()  # 用于记录已经写入的频道名称
+        for name, url in limit_channel_list(channel_list):
+            if name not in written_channels:
+                output_file.write(f"#EXTINF:-1 tvg-name=\"{name}\" tvg-logo=\"https://live.fanmingming.com/tv/{name}.png\" group-title=\"{channel_name}\",{name}\n")
+                output_file.write(f"{url}\n")
+                written_channels.add(name)
+        output_file.write("\n")     
+
 
 
 # 2.生成分组2源
@@ -447,7 +492,7 @@ channel_lists = {
 
 
 
-output5_file_path = f"dk/cts"
+output5_file_path = f"dk/cts.png"
 
 cctv_channels = channel_lists.get("央视", [])
 with open(output5_file_path, 'w', encoding='utf-8') as output_file:
@@ -457,7 +502,7 @@ with open(output5_file_path, 'w', encoding='utf-8') as output_file:
 
 
 
-output6_file_path = f"dk/cts8"
+output6_file_path = f"dk/cts8.png"
 
 cctv_channels = channel_lists.get("央视", [])
 with open(output6_file_path, 'w', encoding='utf-8') as output_file:
@@ -485,10 +530,20 @@ with open(output7_file_path, 'w', encoding='utf-8') as output_file:
 
 
 
+output72_file_path = f"dk/mut.png"
+# 写入所有频道列表并限制数量
+limited_channels = limit_channel_list(channel_list)
+with open(output72_file_path, 'w', encoding='utf-8') as output_file:
+    for channel_name, channel_list in channel_lists.items():
+        output_file.write(f"{channel_name},#genre#\n")  # 写入分类信息
+        for name, url in limit_channel_list(channel_list):
+            output_file.write(f"{name},{url}\n")
+        output_file.write("\n")
 
 
-output8_file_path = f"dk/mut8.m3u"
 
+
+output8_file_path = f"dk/mut8.png"
 
 limited_channels = limit_channel_list(channel_list)
 
@@ -503,7 +558,7 @@ with open(output8_file_path, 'w', encoding='utf-8') as output_file:
 
 
 
-output11_file_path = f"dk/dan8"
+output11_file_path = f"dk/dan8.png"
 
 limited_channels = limit_channel_list(channel_list)
 
@@ -707,7 +762,7 @@ channel_lists = {
 
 
 
-output5_file_path = f"rn/cts"
+output5_file_path = f"rn/cts.png"
 
 cctv_channels = channel_lists.get("央视", [])
 with open(output5_file_path, 'w', encoding='utf-8') as output_file:
@@ -717,7 +772,7 @@ with open(output5_file_path, 'w', encoding='utf-8') as output_file:
 
 
 
-output6_file_path = f"rn/cts8"
+output6_file_path = f"rn/cts8.png"
 
 cctv_channels = channel_lists.get("央视", [])
 with open(output6_file_path, 'w', encoding='utf-8') as output_file:
@@ -731,7 +786,7 @@ with open(output6_file_path, 'w', encoding='utf-8') as output_file:
 
 
 
-output7_file_path = f"rn/mut"
+output7_file_path = f"rn/mut.png"
 
 # 写入所有频道列表并限制数量
 limited_channels = limit_channel_list(channel_list)
@@ -747,7 +802,7 @@ with open(output7_file_path, 'w', encoding='utf-8') as output_file:
 
 
 
-output8_file_path = f"rn/mut8.m3u"
+output8_file_path = f"rn/mut8.png"
 
 
 limited_channels = limit_channel_list(channel_list)
@@ -763,7 +818,7 @@ with open(output8_file_path, 'w', encoding='utf-8') as output_file:
 
 
 
-output11_file_path = f"rn/dan8"
+output11_file_path = f"rn/dan8.png"
 
 limited_channels = limit_channel_list(channel_list)
 
