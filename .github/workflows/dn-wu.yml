@@ -39,13 +39,13 @@ jobs:
         echo "$content5" | curl --user $FTP_USER:$FTP_PASS --ftp-create-dirs -T - ftp://$FTP_HOST/htdocs/dk/mu.png
         
  
-        content6=$(cat "dk/mut8.m3u")
+        content6=$(cat "dk/mut8.png")
         echo "$content6" | curl --user $FTP_USER:$FTP_PASS --ftp-create-dirs -T - ftp://$FTP_HOST/htdocs/dk/mu8u.png
         
    
-        content7=$(cat "dk/cts")
+        content7=$(cat "dk/cts.png")
         echo "$content7" | curl --user $FTP_USER:$FTP_PASS --ftp-create-dirs -T - ftp://$FTP_HOST/htdocs/dk/cts.png
         
 
-        content8=$(cat "dk/cts8")
+        content8=$(cat "dk/cts8.png")
         echo "$content8" | curl --user $FTP_USER:$FTP_PASS --ftp-create-dirs -T - ftp://$FTP_HOST/htdocs/dk/ctu8.png
