@@ -53,7 +53,7 @@ with open(in1_file_path, 'r',  encoding='utf-8') as file:
 
         channel_keywords = {
             'cctv_channels': ['CCTV'],
-            'sport_channels': ['CCTV5', '体育', '足球', '篮球', '羽毛球'],
+            'sport_channels': ['CCTV5', 'CCTV16', '体育', '足球', '篮球', '羽毛球'],
             'child_channels': ['CCTV14', '卡通', '少儿', '哈哈炫动', '动漫', '动画'],
             'satellite_channels': ['卫视'],
             'guangdong_channels': ['广东', '广州', '佛山', '惠州', '河源', '东莞', '梅州', '深圳', '潮州', '珠江', '揭西', '汕头', '汕尾', '清远', '湛江', '珠海', '肇庆', '茂名', '韶关', '客家', '中山', '云浮', '揭阳', '徐闻', '番禺', '徐闻', '大浦'],
@@ -358,7 +358,7 @@ with open(in1_file_path, 'r',  encoding='utf-8') as file:
 
         channel_keywords = {
             'cctv_channels': ['CCTV'],
-            'sport_channels': ['CCTV5', '体育', '足球', '篮球', '羽毛球'],
+            'sport_channels': ['CCTV5', 'CCTV16', '体育', '足球', '篮球', '羽毛球'],
             'child_channels': ['CCTV14', '卡通', '少儿', '哈哈炫动', '动漫', '动画'],
             'satellite_channels': ['卫视'],
             'guangdong_channels': ['广东', '广州', '佛山', '惠州', '河源', '东莞', '梅州', '深圳', '潮州', '珠江', '揭西', '汕头', '汕尾', '清远', '湛江', '珠海', '肇庆', '茂名', '韶关', '客家', '中山', '云浮', '揭阳', '徐闻', '番禺', '徐闻', '大浦'],
@@ -628,7 +628,7 @@ with open(in1_file_path, 'r',  encoding='utf-8') as file:
 
         channel_keywords = {
             'cctv_channels': ['CCTV'],
-            'sport_channels': ['CCTV5', '体育', '足球', '篮球', '羽毛球'],
+            'sport_channels': ['CCTV5', 'CCTV16', '体育', '足球', '篮球', '羽毛球'],
             'child_channels': ['CCTV14', '卡通', '少儿', '哈哈炫动', '动漫', '动画'],
             'satellite_channels': ['卫视'],
             'guangdong_channels': ['广东', '广州', '佛山', '惠州', '河源', '东莞', '梅州', '深圳', '潮州', '珠江', '揭西', '汕头', '汕尾', '清远', '湛江', '珠海', '肇庆', '茂名', '韶关', '客家', '中山', '云浮', '揭阳', '徐闻', '番禺', '徐闻', '大浦'],
