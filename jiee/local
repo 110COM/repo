@@ -155,6 +155,16 @@
 内蒙古少儿,https://livestream-bt.nmtv.cn/nmtv/2318general.m3u8?txSecret=ff5a1fd70ea228ee35b0d29895f37c56&txTime=771E8800
 CCTV4K,http://liveop.cctv.cn/hls/4KHD/playlist.m3u8
 
+CCTV16,http://171.88.22.168:5000/ysp/cctv16
+CCTV5+,http://116.7.10.196:5000/ysp/cctv5p
+CCTV16,http://27.12.136.180:5000/ysp/cctv16
+CCTV5,http://182.86.43.85:5000/ysp/cctv5
+CCTV16,http://60.204.156.223:5000/ysp/cctv16
+CCTV5+,http://114.55.117.163:8081/ysp/cctv5p
+CCTV16,http://119.7.211.20:5000/ysp/cctv16
+CCTV5,http://120.197.175.237:60002/ysp/cctv5
+CCTV16,http://175.27.157.110:5200/ysp/cctv16
+CCTV16,http://39.105.165.94:5000/ysp/cctv16
 CCTV16,http://49.66.70.10:5000/ysp/cctv16
 CCTV5,http://139.227.78.82:5000/ysp/cctv5
 CCTV5+,http://43.138.145.176:5000/ysp/cctv5p
@@ -292,13 +302,4 @@ CCTV5,http://150.158.85.157:5000/ysp/cctv5
 CCTV16,http://116.77.9.160:5555/ysp/cctv16
 CCTV5+,http://114.116.226.20:7000/ysp/cctv5p
 CCTV5+,http://180.171.227.233:5000/ysp/cctv5p
-CCTV16,http://171.88.22.168:5000/ysp/cctv16
-CCTV5+,http://116.7.10.196:5000/ysp/cctv5p
-CCTV16,http://27.12.136.180:5000/ysp/cctv16
-CCTV5,http://182.86.43.85:5000/ysp/cctv5
-CCTV16,http://60.204.156.223:5000/ysp/cctv16
-CCTV5+,http://114.55.117.163:8081/ysp/cctv5p
-CCTV16,http://119.7.211.20:5000/ysp/cctv16
-CCTV5,http://120.197.175.237:60002/ysp/cctv5
-CCTV16,http://175.27.157.110:5200/ysp/cctv16
-CCTV16,http://39.105.165.94:5000/ysp/cctv16
+
