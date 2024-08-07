@@ -21,6 +21,9 @@ anhui_channels = []
 jiangsu_channels = []
 sichuan_channels = []
 
+shanxi6_channels = []
+hubei_channels = []
+
 other_channels2 = []
 
 
@@ -68,6 +71,9 @@ with open(in1_file_path, 'r',  encoding='utf-8') as file:
 			'anhui_channels': ["安徽", "临泉", "义安", "亳州", "六安", "南陵", "合肥", "太湖", "徽州", "寿县", "桐城", "池州", "泗县", "淮北", "淮南", "湾沚", "滁州", "祁门", "繁昌", "蒙城", "阜南", "阜阳", "霍山", "霍邱", "黄山", "岳西", "固镇", "宿州", "肥西", "宿州", "宿州"],
 			'jiangsu_channels': ['江苏', '连云港', '江宁', '海安', '泗阳', '镇江', '江阴', '苏州', '南京', '扬州'],
 			'sichuan_channels': ['四川','乐山', '内江', '凉山', '南充', '宜宾', '巴中', '广元', '广安', '德阳', '眉山', '绵阳', '自贡', '资阳', '遂宁', '阿坝', '熊猫', '汽摩', '蓉城', '成都', '乐至', '什邡', '汶川', '泸县', '泸州', '洪雅', '达州', '黑水', '渑池', '万源', '松潘', '西青', '金川', '长宁', '马尔', '利州', '康定', '甘孜', '营山', '青神'],
+            
+            'shanxi6_channels': ['山西'],
+            'hubei_channels': ['湖北'],
         
         }
 
@@ -134,6 +140,10 @@ anhui_channels_sorted = group_and_sort_channels(anhui_channels)
 jiangsu_channels_sorted = group_and_sort_channels(jiangsu_channels)
 sichuan_channels_sorted = group_and_sort_channels(sichuan_channels)
 
+shanxi6_channels_sorted = group_and_sort_channels(shanxi6_channels)
+hubei_channels_sorted = group_and_sort_channels(hubei_channels)
+
+
 other_channels2_sorted = group_and_sort_channels(other_channels2)
 
 
@@ -177,6 +187,10 @@ channel_lists = {
     "福建":fujian_channels_sorted,
     "广西":guangxi_channels_sorted,
 	"四川":sichuan_channels_sorted,
+    
+    "山西":shanxi6_channels_sorted,
+	"湖北":hubei_channels_sorted,
+    
 	
 	
 	
@@ -326,6 +340,9 @@ anhui_channels = []
 jiangsu_channels = []
 sichuan_channels = []
 
+shanxi6_channels = []
+hubei_channels = []
+
 other_channels2 = []
 
 
@@ -373,6 +390,10 @@ with open(in1_file_path, 'r',  encoding='utf-8') as file:
 			'anhui_channels': ["安徽", "临泉", "义安", "亳州", "六安", "南陵", "合肥", "太湖", "徽州", "寿县", "桐城", "池州", "泗县", "淮北", "淮南", "湾沚", "滁州", "祁门", "繁昌", "蒙城", "阜南", "阜阳", "霍山", "霍邱", "黄山", "岳西", "固镇", "宿州", "肥西", "宿州", "宿州"],
 			'jiangsu_channels': ['江苏', '连云港', '江宁', '海安', '泗阳', '镇江', '江阴', '苏州', '南京', '扬州'],
 			'sichuan_channels': ['四川','乐山', '内江', '凉山', '南充', '宜宾', '巴中', '广元', '广安', '德阳', '眉山', '绵阳', '自贡', '资阳', '遂宁', '阿坝', '熊猫', '汽摩', '蓉城', '成都', '乐至', '什邡', '汶川', '泸县', '泸州', '洪雅', '达州', '黑水', '渑池', '万源', '松潘', '西青', '金川', '长宁', '马尔', '利州', '康定', '甘孜', '营山', '青神'],
+            
+            'shanxi6_channels': ['山西'],
+            'hubei_channels': ['湖北'],
+            
         
         }
 
@@ -439,6 +460,9 @@ anhui_channels_sorted = group_and_sort_channels(anhui_channels)
 jiangsu_channels_sorted = group_and_sort_channels(jiangsu_channels)
 sichuan_channels_sorted = group_and_sort_channels(sichuan_channels)
 
+shanxi6_channels_sorted = group_and_sort_channels(shanxi6_channels)
+hubei_channels_sorted = group_and_sort_channels(hubei_channels)
+
 other_channels2_sorted = group_and_sort_channels(other_channels2)
 
 
@@ -482,6 +506,9 @@ channel_lists = {
     "福建":fujian_channels_sorted,
     "广西":guangxi_channels_sorted,
 	"四川":sichuan_channels_sorted,
+    
+    "山西":shanxi6_channels_sorted,
+	"湖北":hubei_channels_sorted,
 	
 	
 	
@@ -596,6 +623,9 @@ anhui_channels = []
 jiangsu_channels = []
 sichuan_channels = []
 
+shanxi6_channels = []
+hubei_channels = []
+
 other_channels2 = []
 
 
@@ -643,6 +673,9 @@ with open(in1_file_path, 'r',  encoding='utf-8') as file:
 			'anhui_channels': ["安徽", "临泉", "义安", "亳州", "六安", "南陵", "合肥", "太湖", "徽州", "寿县", "桐城", "池州", "泗县", "淮北", "淮南", "湾沚", "滁州", "祁门", "繁昌", "蒙城", "阜南", "阜阳", "霍山", "霍邱", "黄山", "岳西", "固镇", "宿州", "肥西", "宿州", "宿州"],
 			'jiangsu_channels': ['江苏', '连云港', '江宁', '海安', '泗阳', '镇江', '江阴', '苏州', '南京', '扬州'],
 			'sichuan_channels': ['四川','乐山', '内江', '凉山', '南充', '宜宾', '巴中', '广元', '广安', '德阳', '眉山', '绵阳', '自贡', '资阳', '遂宁', '阿坝', '熊猫', '汽摩', '蓉城', '成都', '乐至', '什邡', '汶川', '泸县', '泸州', '洪雅', '达州', '黑水', '渑池', '万源', '松潘', '西青', '金川', '长宁', '马尔', '利州', '康定', '甘孜', '营山', '青神'],
+            
+            'shanxi6_channels': ['山西'],
+            'hubei_channels': ['湖北'],
         
         }
 
@@ -709,6 +742,9 @@ anhui_channels_sorted = group_and_sort_channels(anhui_channels)
 jiangsu_channels_sorted = group_and_sort_channels(jiangsu_channels)
 sichuan_channels_sorted = group_and_sort_channels(sichuan_channels)
 
+shanxi6_channels_sorted = group_and_sort_channels(shanxi6_channels)
+hubei_channels_sorted = group_and_sort_channels(hubei_channels)
+
 other_channels2_sorted = group_and_sort_channels(other_channels2)
 
 
@@ -752,6 +788,9 @@ channel_lists = {
     "福建":fujian_channels_sorted,
     "广西":guangxi_channels_sorted,
 	"四川":sichuan_channels_sorted,
+    
+    "山西":shanxi6_channels_sorted,
+	"湖北":hubei_channels_sorted,
 	
 	
 	
