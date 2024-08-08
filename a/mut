@@ -134,10 +134,23 @@ CCTV17,http://36.35.16.98:9901/tsfile/live/0019_1.m3u8?key=txiptv&playlive=0&aut
 CCTV17,http://221.214.48.30:352/tsfile/live/0019_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV17,http://218.21.73.73:59901/tsfile/live/1001_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV17,http://219.146.65.78:59901/tsfile/live/1005_1.m3u8?key=txiptv&playlive=1&authid=0
+CCTV世界地理,http://pix.zhoujie218.top/ysp/cctv-shijiedili
+CCTV兵器科技,http://pix.zhoujie218.top/ysp/cctv-bingqikeji
+CCTV卫生健康,http://pix.zhoujie218.top/ysp/cctv-weishengjiankang
+CCTV央视台球,http://pix.zhoujie218.top/ysp/cctv-yangshitaiqiu
+CCTV央视文化精品,http://pix.zhoujie218.top/ysp/cctv-wenhuajingpin
+CCTV女性时尚,http://pix.zhoujie218.top/ysp/cctv-nvxingshishang
 CCTV怀旧剧场,http://120.238.84.44:9901/tsfile/live/1091_1.m3u8?key=txiptv&playlive=1&authid=0
+CCTV怀旧剧场,http://pix.zhoujie218.top/ysp/cctv-huaijiujuchang
+CCTV电视指南,http://pix.zhoujie218.top/ysp/cctv-dianshizhinan
+CCTV第一剧场,http://pix.zhoujie218.top/ysp/cctv-diyijuchang
 CCTV英文新闻,http://110.52.146.9:59901/tsfile/live/1016_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV风云剧场,http://58.220.211.90:352/tsfile/live/1010_1.m3u8?key=txiptv&playlive=1&authid=0
+CCTV风云剧场,http://pix.zhoujie218.top/ysp/cctv-fengyunjuchang
 CCTV风云足球,http://58.220.211.90:352/tsfile/live/1006_1.m3u8?key=txiptv&playlive=1&authid=0
+CCTV风云足球,http://pix.zhoujie218.top/ysp/cctv-fengyunzuqiu
+CCTV风云音乐,http://pix.zhoujie218.top/ysp/cctv-fengyunyinyue
+CCTV高尔夫网球,http://pix.zhoujie218.top/ysp/cctv-gaoerfuwangqiu
 
 卫视,#genre#
 上海卫视,http://14.23.119.90:59901/tsfile/live/0107_1.m3u8?key=txiptv&playlive=1&authid=0
