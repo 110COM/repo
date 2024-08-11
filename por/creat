@@ -73,7 +73,7 @@ with open(in1_file_path, 'r',  encoding='utf-8') as file:
 			'sichuan_channels': ['四川','乐山', '内江', '凉山', '南充', '宜宾', '巴中', '广元', '广安', '德阳', '眉山', '绵阳', '自贡', '资阳', '遂宁', '阿坝', '熊猫', '汽摩', '蓉城', '成都', '乐至', '什邡', '汶川', '泸县', '泸州', '洪雅', '达州', '黑水', '渑池', '万源', '松潘', '西青', '金川', '长宁', '马尔', '利州', '康定', '甘孜', '营山', '青神'],
             
             'shanxi6_channels': ['山西'],
-            'hubei_channels': ['湖北'],
+            'hubei_channels': ['湖北', '武汉'],
         
         }
 
@@ -150,7 +150,7 @@ other_channels2_sorted = group_and_sort_channels(other_channels2)
 
 
 
-def limit_channel_list(channel_list, limit=7):
+def limit_channel_list(channel_list, limit=15):
     #print("Starting limit_channel_list function...")
     #print("channel_list:", channel_list)  # 输出 channel_list 的值
     name_counts = {}
@@ -392,7 +392,7 @@ with open(in1_file_path, 'r',  encoding='utf-8') as file:
 			'sichuan_channels': ['四川','乐山', '内江', '凉山', '南充', '宜宾', '巴中', '广元', '广安', '德阳', '眉山', '绵阳', '自贡', '资阳', '遂宁', '阿坝', '熊猫', '汽摩', '蓉城', '成都', '乐至', '什邡', '汶川', '泸县', '泸州', '洪雅', '达州', '黑水', '渑池', '万源', '松潘', '西青', '金川', '长宁', '马尔', '利州', '康定', '甘孜', '营山', '青神'],
             
             'shanxi6_channels': ['山西'],
-            'hubei_channels': ['湖北'],
+            'hubei_channels': ['湖北', '武汉'],
             
         
         }
@@ -469,7 +469,7 @@ other_channels2_sorted = group_and_sort_channels(other_channels2)
 
 
 
-def limit_channel_list(channel_list, limit=7):
+def limit_channel_list(channel_list, limit=15):
     #print("Starting limit_channel_list function...")
     #print("channel_list:", channel_list)  # 输出 channel_list 的值
     name_counts = {}
@@ -675,7 +675,7 @@ with open(in1_file_path, 'r',  encoding='utf-8') as file:
 			'sichuan_channels': ['四川','乐山', '内江', '凉山', '南充', '宜宾', '巴中', '广元', '广安', '德阳', '眉山', '绵阳', '自贡', '资阳', '遂宁', '阿坝', '熊猫', '汽摩', '蓉城', '成都', '乐至', '什邡', '汶川', '泸县', '泸州', '洪雅', '达州', '黑水', '渑池', '万源', '松潘', '西青', '金川', '长宁', '马尔', '利州', '康定', '甘孜', '营山', '青神'],
             
             'shanxi6_channels': ['山西'],
-            'hubei_channels': ['湖北'],
+            'hubei_channels': ['湖北', '武汉'],
         
         }
 
@@ -751,7 +751,7 @@ other_channels2_sorted = group_and_sort_channels(other_channels2)
 
 
 
-def limit_channel_list(channel_list, limit=7):
+def limit_channel_list(channel_list, limit=15):
     #print("Starting limit_channel_list function...")
     #print("channel_list:", channel_list)  # 输出 channel_list 的值
     name_counts = {}
