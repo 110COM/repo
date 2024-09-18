@@ -21,7 +21,7 @@ filtered_data = {}
 
 
 included_keywords = ["CCTV", "卫视"]
-excluded_keywords = ["CCTV4美洲", "CCTV4欧洲", "电视指南", "女性时尚", "世界地理"]
+excluded_keywords = ["CCTV4美洲", "CCTV4欧洲", "电视指南", "女性时尚", "世界地理", "姓"]
 
 for line in lines:
     if line.strip() and '#' not in line and ',' in line:
@@ -70,4 +70,4 @@ for i in range(1, max_files + 1):
         exit(1)
 
 
-print("执行完毕！")
+print("over")
