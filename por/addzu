@@ -1,0 +1,73 @@
+import requests
+import os
+
+
+url = 'https://github.com/govnn/govnn.github.io/raw/refs/heads/main/e/888'  
+try:
+    response = requests.get(url, timeout=10)  
+    response.raise_for_status()  
+except requests.exceptions.RequestException as e:
+    print(f"网络请求失败: {e}")
+    exit(1)
+
+lines = response.text.splitlines()
+if not lines:
+    print("获取到的数据为空")
+    exit(1)
+
+
+lines = set(lines)  
+filtered_data = {}  
+
+
+included_keywords = ["CCTV", "卫视"]
+excluded_keywords = ["CCTV4美洲", "CCTV4欧洲", "电视指南", "女性时尚", "世界地理"]
+
+for line in lines:
+    if line.strip() and '#' not in line and ',' in line:
+        name, url = line.split(',', 1)  
+        name = name.strip()
+        url = url.strip()
+
+        if any(keyword in name for keyword in included_keywords) and not any(excluded_keyword in name for excluded_keyword in excluded_keywords):
+
+            if name not in filtered_data:
+                filtered_data[name] = []
+
+            if url not in filtered_data[name]:
+                filtered_data[name].append(url)
+
+if not filtered_data:
+    print("没有有效的数据行")
+    exit(1)
+
+
+file_counter = 1
+max_files = 3
+grouped_data = {i: [] for i in range(1, max_files + 1)}  
+current_file_counts = {i: {} for i in range(1, max_files + 1)}  
+
+for name, urls in filtered_data.items():
+
+    for url in urls:
+
+        for file_num in range(1, max_files + 1):
+            if current_file_counts[file_num].get(name, 0) < 5:  
+                grouped_data[file_num].append((name, url))
+                current_file_counts[file_num][name] = current_file_counts[file_num].get(name, 0) + 1
+                break  
+
+
+for i in range(1, max_files + 1):
+    #file_path = os.path.join(os.path.dirname(__file__), f'zuyw{i}.txt')
+    file_path = 'jiee/fenzu{}'
+    try:
+        with open(file_path, 'a', encoding='utf-8') as f:
+            for name, url in grouped_data[i]:
+                f.write(f"{name},{url}\n")
+    except IOError as e:
+        print(f"文件写入失败: {e}")
+        exit(1)
+
+
+print("执行完毕！")
