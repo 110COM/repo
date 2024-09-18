@@ -39,6 +39,9 @@ jobs:
       - name: Run hdaddgroup
         run: python ${{ github.workspace }}/por/hdaddgroup
 
+      - name: Run addzuyw
+        run: python ${{ github.workspace }}/por/addzuyw
+        
       - name: Run creat
         run: python ${{ github.workspace }}/por/creat
 
