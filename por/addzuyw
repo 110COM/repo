@@ -60,7 +60,7 @@ for name, urls in filtered_data.items():
 
 for i in range(1, max_files + 1):
     #file_path = os.path.join(os.path.dirname(__file__), f'zuyw{i}.txt')
-    file_path = 'jiee/fenzu{}'
+    file_path = 'jiee/fenzu{i}'
     try:
         with open(file_path, 'a', encoding='utf-8') as f:
             for name, url in grouped_data[i]:
