@@ -3,6 +3,6 @@
 测试3,http://l.cztvcloud.com/channels/lantian/SXyuhang1/720p.m3u8
 测试4,http://l.cztvcloud.com/channels/lantian/SXshangyu3/720p.m3u8?zzhed
 测试5,https://livestream-bt.nmtv.cn/nmtv/2316general.m3u8?txSecret=173f71025a2de64458989cfb281a0a37&txTime=771E8800
-测试6,http://171.213.199.78:8088/udp/239.93.1.23:6000
-测试7,http://211.158.153.132:8005/rtp/225.0.4.127:7980
+测试6,http://60.214.237.142:352/tsfile/live/0002_1.m3u8?key=txiptv&playlive=1&authid=0
+测试7,http://116.117.104.137:9901/tsfile/live/0007_1.m3u8?key=txiptv&playlive=1&authid=0
 临时1,http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226428/index.m3u8
