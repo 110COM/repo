@@ -52,7 +52,7 @@ for name, urls in filtered_data.items():
     for url in urls:
 
         for file_num in range(1, max_files + 1):
-            if current_file_counts[file_num].get(name, 0) < 5:  
+            if current_file_counts[file_num].get(name, 0) < 6:  
                 grouped_data[file_num].append((name, url))
                 current_file_counts[file_num][name] = current_file_counts[file_num].get(name, 0) + 1
                 break  
