@@ -10,8 +10,8 @@ http://l.cztvcloud.com/channels/lantian/SXshangyu3/720p.m3u8?zzhed
 #EXTINF:-1,测试5
 https://livestream-bt.nmtv.cn/nmtv/2316general.m3u8?txSecret=173f71025a2de64458989cfb281a0a37&txTime=771E8800
 #EXTINF:-1,测试6
-http://112.123.210.14:85/tsfile/live/0002_1.m3u8?key=txiptv&playlive=0&authid=0
+http://58.37.252.156:9200/udp/239.45.0.1:5140
 #EXTINF:-1,测试7
-http://125.89.163.44:8888/rtp/239.77.0.138:5146
+http://58.37.217.12:4022/udp/239.45.3.56:5140
 #EXTINF:-1,临时1
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226428/index.m3u8
