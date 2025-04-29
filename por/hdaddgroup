@@ -121,7 +121,7 @@ except Exception as e:
 
 
 # 定义常量
-LIMIT_PER_GROUP = 7
+LIMIT_PER_GROUP = 14
 
 def process_file(input_file):
     n = LIMIT_PER_GROUP
