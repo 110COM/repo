@@ -12,6 +12,6 @@ https://livestream-bt.nmtv.cn/nmtv/2316general.m3u8?txSecret=173f71025a2de644589
 #EXTINF:-1,测试6
 http://110.83.236.70:59901/tsfile/live/0002_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1,测试7
-http://61.156.228.12:8154/tsfile/live/0007_1.m3u8?key=txiptv&playlive=1&authid=0
+http://60.187.245.106:9901/tsfile/live/0007_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1,临时1
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226428/index.m3u8
